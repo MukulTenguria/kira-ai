@@ -1,19 +1,19 @@
 import "./sass/main.scss";
-import Logo from "./assets/img/logo-white.png"
-import logogreen1x from "./assets/img/logo-green-1x.png"
-import logogreen2x from "./assets/img/logo-green-2x.png"
-import logogreensmall1x from "./assets/img/logo-green-small-1x.png"
-import logogreensmall2x from "./assets/img/logo-green-small-2x.png"
-import nat1Large from "./assets/img/nat-1-large.jpg"
-import nat1 from "./assets/img/nat-1.jpg"
-import nat2Large from "./assets/img/nat-2-large.jpg"
-import nat2 from "./assets/img/nat-2.jpg"
-import nat3Large from "./assets/img/nat-3-large.jpg"
-import nat3 from "./assets/img/nat-3.jpg"
-import nat8 from "./assets/img/nat-8.jpg"
-import nat9 from "./assets/img/nat-9.jpg"
-import video from "./assets/img/video.mp4"
-import videowebm from "./assets/img/video.webm"
+import Logo from "./assets/img/logo-white.png";
+import logogreen1x from "./assets/img/logo-green-1x.png";
+import logogreen2x from "./assets/img/logo-green-2x.png";
+import logogreensmall1x from "./assets/img/logo-green-small-1x.png";
+import logogreensmall2x from "./assets/img/logo-green-small-2x.png";
+import nat1Large from "./assets/img/nat-1-large.jpg";
+import nat1 from "./assets/img/nat-1.jpg";
+import nat2Large from "./assets/img/nat-2-large.jpg";
+import nat2 from "./assets/img/nat-2.jpg";
+import nat3Large from "./assets/img/nat-3-large.jpg";
+import nat3 from "./assets/img/nat-3.jpg";
+import nat8 from "./assets/img/nat-8.jpg";
+import nat9 from "./assets/img/nat-9.jpg";
+import video from "./assets/img/video.mp4";
+import videowebm from "./assets/img/video.webm";
 
 function App() {
   return (
@@ -69,12 +69,14 @@ function App() {
 
         <div className="header__text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary--main">Outdoors</span>
-            <span className="heading-primary--sub">is where life happens</span>
+            <span className="heading-primary--main">KIRA AI LLC</span>
+            <span className="heading-primary--sub">
+              AI & Software Development for Business Solutions
+            </span>
           </h1>
 
-          <a href="#section-tours" className="btn btn--white btn--animated">
-            Discover our tours
+          <a href="#contact" class="btn btn--white btn--animated">
+            Get a Business Solution
           </a>
         </div>
       </header>
@@ -82,28 +84,33 @@ function App() {
       <main>
         <section className="section-about">
           <div className="u-center-text u-margin-bottom-big">
-            <h2 className="heading-secondary">
-              Exciting tours for adventurous people
-            </h2>
+            <h2 className="heading-secondary">Why Kira AI</h2>
           </div>
 
           <div className="row">
             <div className="col-1-of-2">
               <h3 className="heading-tertiary u-margin-bottom-small">
-                You're going to fall in love with nature
+                Business-first engineering
               </h3>
               <p className="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
+                We design AI and software solutions focused on real business
+                outcomes, not just technology demos.
               </p>
 
               <h3 className="heading-tertiary u-margin-bottom-small">
-                Live adventures like you never have before
+                AI + Software expertise
               </h3>
               <p className="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores nulla deserunt voluptatum nam.
+                We combine advanced AI with scalable software engineering to
+                build production-ready systems.
+              </p>
+
+              <h3 className="heading-tertiary u-margin-bottom-small">
+                Founder-led execution
+              </h3>
+              <p className="paragraph">
+                Every project is led by experienced engineers ensuring quality,
+                speed, and long-term scalability.
               </p>
 
               <a href="#" className="btn-text">
@@ -146,11 +153,11 @@ function App() {
               <div className="feature-box">
                 <i className="feature-box__icon icon-basic-world"></i>
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  Explore the world
+                  AI Automation
                 </h3>
                 <p className="feature-box__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur.
+                  Automate workflows, decision-making, and operations using
+                  AI-driven systems.
                 </p>
               </div>
             </div>
@@ -159,11 +166,11 @@ function App() {
               <div className="feature-box">
                 <i className="feature-box__icon icon-basic-compass"></i>
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  Meet nature
+                  Custom AI Tools
                 </h3>
                 <p className="feature-box__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur.
+                  Tailor-made AI solutions built specifically for your business
+                  needs.
                 </p>
               </div>
             </div>
@@ -172,11 +179,10 @@ function App() {
               <div className="feature-box">
                 <i className="feature-box__icon icon-basic-map"></i>
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  Find your way
+                  MVP Development
                 </h3>
                 <p className="feature-box__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur.
+                  Rapid MVP development for startups and product teams.
                 </p>
               </div>
             </div>
@@ -185,11 +191,11 @@ function App() {
               <div className="feature-box">
                 <i className="feature-box__icon icon-basic-heart"></i>
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  Live a healthier life
+                  Data & Workflow Automation
                 </h3>
                 <p className="feature-box__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur.
+                  End-to-end automation for data pipelines and internal
+                  processes.
                 </p>
               </div>
             </div>
@@ -198,7 +204,7 @@ function App() {
 
         <section className="section-tours" id="section-tours">
           <div className="u-center-text u-margin-bottom-big">
-            <h2 className="heading-secondary">Most popular tours</h2>
+            <h2 className="heading-secondary">Software Development Projects</h2>
           </div>
 
           <div className="row">
@@ -208,16 +214,15 @@ function App() {
                   <div className="card__picture card__picture--1">&nbsp;</div>
                   <h4 className="card__heading">
                     <span className="card__heading-span card__heading-span--1">
-                      The Sea Explorer
+                      AI Solutions
                     </span>
                   </h4>
                   <div className="card__details">
                     <ul>
-                      <li>3 day tours</li>
-                      <li>Up to 30 people</li>
-                      <li>2 tour guides</li>
-                      <li>Sleep in cozy hotels</li>
-                      <li>Difficulty: easy</li>
+                      <li>Custom AI systems</li>
+                      <li>Scalable architecture</li>
+                      <li>Business-focused design</li>
+                      <li>Production-ready delivery</li>
                     </ul>
                   </div>
                 </div>
@@ -241,16 +246,15 @@ function App() {
                   <div className="card__picture card__picture--2">&nbsp;</div>
                   <h4 className="card__heading">
                     <span className="card__heading-span card__heading-span--2">
-                      The Forest Hiker
+                      Software Projects
                     </span>
                   </h4>
                   <div className="card__details">
                     <ul>
-                      <li>7 day tours</li>
-                      <li>Up to 40 people</li>
-                      <li>6 tour guides</li>
-                      <li>Sleep in provided tents</li>
-                      <li>Difficulty: medium</li>
+                      <li>Custom AI systems</li>
+                      <li>Scalable architecture</li>
+                      <li>Business-focused design</li>
+                      <li>Production-ready delivery</li>
                     </ul>
                   </div>
                 </div>
@@ -274,16 +278,15 @@ function App() {
                   <div className="card__picture card__picture--3">&nbsp;</div>
                   <h4 className="card__heading">
                     <span className="card__heading-span card__heading-span--3">
-                      The Snow Adventurer
+                      MVP Builds
                     </span>
                   </h4>
                   <div className="card__details">
                     <ul>
-                      <li>5 day tours</li>
-                      <li>Up to 15 people</li>
-                      <li>3 tour guides</li>
-                      <li>Sleep in provided tents</li>
-                      <li>Difficulty: hard</li>
+                      <li>Custom AI systems</li>
+                      <li>Scalable architecture</li>
+                      <li>Business-focused design</li>
+                      <li>Production-ready delivery</li>
                     </ul>
                   </div>
                 </div>
@@ -319,31 +322,22 @@ function App() {
           </div>
 
           <div className="u-center-text u-margin-bottom-big">
-            <h2 className="heading-secondary">
-              We make people genuinely happy
-            </h2>
+            <h2 className="heading-secondary">Who We Work With</h2>
           </div>
 
           <div className="row">
             <div className="story">
               <figure className="story__shape">
-                <img
-                  src={nat8}
-                  alt="Person on a tour"
-                  className="story__img"
-                />
+                <img src={nat8} alt="Person on a tour" className="story__img" />
                 <figcaption className="story__caption">Mary Smith</figcaption>
               </figure>
               <div className="story__text">
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  I had the best week ever with my family
+                  Startups & SMBs
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur libero repellat quis
-                  consequatur ducimus quam nisi exercitationem omnis earum qui.
-                  Aperiam, ipsum sapiente aspernatur libero repellat quis
-                  consequatur ducimus quam nisi exercitationem omnis earum qui.
+                  We help startups and small businesses launch fast, validate
+                  ideas, and scale with confidence.
                 </p>
               </div>
             </div>
@@ -352,23 +346,16 @@ function App() {
           <div className="row">
             <div className="story">
               <figure className="story__shape">
-                <img
-                  src={nat9}
-                  alt="Person on a tour"
-                  className="story__img"
-                />
+                <img src={nat9} alt="Person on a tour" className="story__img" />
                 <figcaption className="story__caption">Jack Wilson</figcaption>
               </figure>
               <div className="story__text">
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  WOW! My life is completely different now
+                  Product Teams & Enterprises
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, ipsum sapiente aspernatur libero repellat quis
-                  consequatur ducimus quam nisi exercitationem omnis earum qui.
-                  Aperiam, ipsum sapiente aspernatur libero repellat quis
-                  consequatur ducimus quam nisi exercitationem omnis earum qui.
+                  We collaborate with internal teams to build scalable, secure,
+                  and maintainable systems. .
                 </p>
               </div>
             </div>
@@ -533,7 +520,7 @@ function App() {
               &times;
             </a>
             <h2 className="heading-secondary u-margin-bottom-small">
-              Start booking now
+              Book a Free Discovery Call
             </h2>
             <h3 className="heading-tertiary u-margin-bottom-small">
               Important &ndash; Please read these terms before booking
