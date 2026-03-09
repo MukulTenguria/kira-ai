@@ -64,7 +64,7 @@ const FooterLinksSection = styled(Box)({
 
 const FooterLinksGrid = styled(Grid)({
   marginBottom: "40px",
-  justifyContent: "center",
+  justifyContent: "space-evenly",
 });
 
 const FooterColumn = styled(Box)({
@@ -163,7 +163,7 @@ const Footer = () => {
 
       {/* Footer Links Section */}
       <FooterLinksSection>
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <FooterLinksGrid container spacing={4}>
             <Grid item xs={12} sm={6} md={3}>
               <FooterColumn>
