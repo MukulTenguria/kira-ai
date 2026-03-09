@@ -28,7 +28,11 @@ const InsightInnovation = () => {
           <AppButton variant="contained" withAnimation={false}>
             View Blog
           </AppButton>
-          <AppButton className="text-white" variant="outlined" withAnimation={false}>
+          <AppButton
+            className="text-white"
+            variant="outlined"
+            withAnimation={false}
+          >
             View Analyst Report
           </AppButton>
         </Stack>
