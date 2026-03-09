@@ -1,4 +1,4 @@
-import { Avatar, Box, Chip, Grid, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { CustomChip } from "./style";
 import AppButton from "./AppButton";
@@ -71,6 +71,12 @@ const PlatformIndustry = () => {
       description: "Gartner® Magic Quadrant™ Reports",
       subHeading: "5",
     },
+    {
+      title: "A Leader in",
+      description:
+        "Forrester Wave™ Reports Q1, Q2, Q3, Q4 2025, Q2, Q4 2024, and Q4 2023",
+      subHeading: "9",
+    },
   ];
   return (
     <>
@@ -93,6 +99,7 @@ const PlatformIndustry = () => {
         {industry.map((data) => {
           return (
             <CustomChip
+              key={data.text}
               avatar={<Avatar sizes={10}>{data.icon}</Avatar>}
               label={data.text}
             />
