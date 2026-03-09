@@ -183,7 +183,6 @@ export const CustomChip = styled(Chip)({
   },
 });
 
-
 export const CustomButton = styled(Button)({
   "&.MuiButton-outlined": {
     borderRadius: "40px !important",
@@ -200,18 +199,38 @@ export const CustomButton = styled(Button)({
     fontWeight: 600,
     textTransform: "unset",
   },
-
-})
+});
 
 export const InsightInnovationWrapper = styled(Stack)({
   backgroundColor: "#032d42",
-  background: `
-  linear-gradient(
-    135deg,
-    #021b29 0%,
-    #032d42 80%,
-    #62d84e 200%
-  )
-`,
-  color:"#fff"
-})
+  color: "#fff",
+  "& .skill__forecast": {
+    "&:hover": {
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+    },
+    height: "100%",
+    "& > img": {
+      borderTopLeftRadius: "20px",
+      borderTopRightRadius: "20px",
+    },
+    borderRadius: "20px",
+    backgroundColor: "var(--cyan-900)",
+  },
+  "& .report__card": {
+    "&:hover": {
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+    },
+    "& > div > img": {
+      borderTopLeftRadius: "20px",
+      borderBottomLeftRadius: "20px",
+    },
+    borderRadius: "20px",
+    backgroundColor: "var(--cyan-900)",
+    height: "200px",
+    "& > div": {
+      display: "flex",
+    },
+  },
+});

@@ -1,16 +1,42 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { BannerWrapper } from "../style";
 import BannerCarousel from "./BannerCarousel";
-import TimerDotPro from "../TimerDotPro";
-import TimerDot from "../TimerDot";
+import AppButton from "../AppButton";
+import { motion } from "framer-motion";
+
+/* ================= ANIMATION VARIANTS ================= */
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: 60 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: -60 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+/* ================= COMPONENT ================= */
+
 const Banner = () => {
   return (
     <BannerWrapper className="banner">
       <Box className="banner__container">
-        <Grid className="" container>
+        <Grid container>
+          {/* LEFT SIDE */}
           <Grid size={6}>
-            <Box className="">
+            <motion.div
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Typography
                 className="text-lime-500"
                 variant="h2"
@@ -18,56 +44,103 @@ const Banner = () => {
               >
                 Come and put AI to work for
               </Typography>
+
               <Typography variant="h2" fontWeight={600}>
                 you at Knowledge 2026
               </Typography>
-            </Box>
+            </motion.div>
           </Grid>
+
+          {/* RIGHT SIDE */}
           <Grid size={6}>
-            <Box>
+            <motion.div
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Typography variant="h5">
                 Only the ServiceNow AI Platform connects any workflow, any AI,
                 and any data source—so everything and everyone finally works
                 together.
               </Typography>
-              <Stack className="mt-4" direction="row" gap={5}>
-                <Button className="px-5 py-1" variant="contained">
-                  Explore Platform
-                </Button>
-                <Button className="px-5 py-1" variant="outlined">
-                  Watch Video
-                </Button>
-              </Stack>
-            </Box>
+
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <Stack className="mt-4" direction="row" gap={5}>
+                  <AppButton variant="contained">Explore Platform</AppButton>
+
+                  <AppButton variant="outlined">Watch Video</AppButton>
+                </Stack>
+              </motion.div>
+            </motion.div>
           </Grid>
         </Grid>
       </Box>
-      <BannerCarousel />
+
+      {/* CAROUSEL */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <BannerCarousel />
+      </motion.div>
+
+      {/* BOTTOM TEXT */}
       <Stack>
-        <Typography
-          className="text-white my-7"
-          variant="h4"
-          fontWeight={600}
-          textAlign="center"
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
         >
-          The world works with ServiceNow
-        </Typography>
-        <Typography
-          className="text-lime-500"
-          variant="h4"
-          fontWeight={600}
-          textAlign="center"
+          <Typography
+            className="text-white my-7"
+            variant="h4"
+            fontWeight={600}
+            textAlign="center"
+          >
+            The world works with ServiceNow
+          </Typography>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
         >
-          ServiceNow is the AI control tower
-        </Typography>
-        <Typography
-          className="text-white"
-          variant="h4"
-          fontWeight={600}
-          textAlign="center"
+          <Typography
+            className="text-lime-500"
+            variant="h4"
+            fontWeight={600}
+            textAlign="center"
+          >
+            ServiceNow is the AI control tower
+          </Typography>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
         >
-          for business reinvention
-        </Typography>
+          <Typography
+            className="text-white"
+            variant="h4"
+            fontWeight={600}
+            textAlign="center"
+          >
+            for business reinvention
+          </Typography>
+        </motion.div>
       </Stack>
     </BannerWrapper>
   );

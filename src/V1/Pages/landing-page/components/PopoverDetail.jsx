@@ -16,6 +16,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { MENU_LIST } from "../menu";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import AppButton from "./AppButton";
 const PopoverDetail = ({ activeMenu, option, setOption }) => {
   console.log("asdfasdfasdfasdf", option?.sections);
   return (
@@ -87,11 +88,8 @@ const PopoverDetail = ({ activeMenu, option, setOption }) => {
               {option?.sections?.items?.data?.map((data) => {
                 return (
                   <Grid size={4}>
-                    <Box className = "list__detail__item--card">
-                      <Typography
-                        className=""
-                        fontWeight={600}
-                      >
+                    <Box className="list__detail__item--card">
+                      <Typography className="" fontWeight={600}>
                         {data?.title}
                       </Typography>{" "}
                       <Typography

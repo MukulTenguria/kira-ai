@@ -1,14 +1,7 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Chip,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Chip, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import { CustomButton, CustomChip } from "./style";
+import { CustomChip } from "./style";
+import AppButton from "./AppButton";
 import IndustryCarousel from "../components/IndustryCarousel";
 import AddHomeIcon from "@mui/icons-material/AddHome";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
@@ -78,12 +71,6 @@ const PlatformIndustry = () => {
       description: "Gartner® Magic Quadrant™ Reports",
       subHeading: "5",
     },
-    {
-      title: "A Leader in",
-      description:
-        "Forrester Wave™ Reports Q1, Q2, Q3, Q4 2025, Q2, Q4 2024, and Q4 2023",
-      subHeading: "9",
-    },
   ];
   return (
     <>
@@ -121,9 +108,9 @@ const PlatformIndustry = () => {
         >
           When our customers work, the world works
         </Typography>
-        <CustomButton className="px-5 py-1 text-xl" variant="contained">
+        <AppButton variant="contained" withAnimation={false}>
           Explore Platform
-        </CustomButton>
+        </AppButton>
       </Stack>
       <IndustryCarousel />
       <Typography
@@ -134,7 +121,7 @@ const PlatformIndustry = () => {
       >
         Recognition from trusted industry experts
       </Typography>
-      <Grid container className="mx-10">
+      <Grid container className="mx-10 mb-10">
         {industries.map((data) => {
           return (
             <Grid size={3}>
