@@ -26,6 +26,12 @@ const NewsletterSection = styled(Box)({
   textAlign: "center",
   borderBottom: "1px solid #e0e0e0",
   backgroundColor: "#fff",
+  "@media (max-width: 768px)": {
+    padding: "40px 20px",
+  },
+  "@media (max-width: 480px)": {
+    padding: "30px 16px",
+  },
 });
 
 const NewsletterHeading = styled(Typography)({
@@ -33,6 +39,14 @@ const NewsletterHeading = styled(Typography)({
   fontWeight: 700,
   marginBottom: "24px",
   color: "#000",
+  "@media (max-width: 768px)": {
+    fontSize: "24px",
+    marginBottom: "18px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "20px",
+    marginBottom: "14px",
+  },
 });
 
 const NewsletterForm = styled(Stack)({
@@ -43,6 +57,11 @@ const NewsletterForm = styled(Stack)({
   alignItems: "center",
   maxWidth: "500px",
   margin: "0 auto",
+  "@media (max-width: 600px)": {
+    flexDirection: "column",
+    gap: "10px",
+    maxWidth: "100%",
+  },
 });
 
 const EmailInput = styled(TextField)({
@@ -60,6 +79,12 @@ const FooterLinksSection = styled(Box)({
   padding: "60px 40px",
   borderBottom: "1px solid #e0e0e0",
   backgroundColor: "#fff",
+  "@media (max-width: 768px)": {
+    padding: "40px 20px",
+  },
+  "@media (max-width: 480px)": {
+    padding: "30px 16px",
+  },
 });
 
 const FooterLinksGrid = styled(Grid)({
@@ -78,6 +103,14 @@ const FooterColumnTitle = styled(Typography)({
   fontWeight: 600,
   color: "#000",
   marginBottom: "12px",
+  "@media (max-width: 768px)": {
+    fontSize: "18px",
+    marginBottom: "10px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "16px",
+    marginBottom: "8px",
+  },
 });
 
 const FooterLink = styled(Typography)({
@@ -88,13 +121,24 @@ const FooterLink = styled(Typography)({
   "&:hover": {
     textDecoration: "underline",
   },
+  "@media (max-width: 768px)": {
+    fontSize: "14px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "13px",
+  },
 });
 
 const DemoSection = styled(Box)({
   paddingTop: "60px",
   textAlign: "center",
-//   borderBottom: "1px solid #e0e0e0",
   backgroundColor: "#fff",
+  "@media (max-width: 768px)": {
+    paddingTop: "40px",
+  },
+  "@media (max-width: 480px)": {
+    paddingTop: "30px",
+  },
 });
 
 const DemoHeading = styled(Typography)({
@@ -102,6 +146,14 @@ const DemoHeading = styled(Typography)({
   fontWeight: 700,
   marginBottom: "24px",
   color: "#000",
+  "@media (max-width: 768px)": {
+    fontSize: "20px",
+    marginBottom: "18px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "18px",
+    marginBottom: "14px",
+  },
 });
 
 const BottomFooter = styled(Box)({
@@ -110,10 +162,14 @@ const BottomFooter = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
   backgroundColor: "#fff",
-//   borderTop: "1px solid #e0e0e0",
   "@media (max-width: 768px)": {
+    padding: "30px",
     flexDirection: "column",
     gap: "20px",
+  },
+  "@media (max-width: 480px)": {
+    padding: "20px 16px",
+    gap: "15px",
   },
 });
 
@@ -131,11 +187,29 @@ const SocialIconsBox = styled(Stack)({
       color: "#62d84e",
     },
   },
+  "@media (max-width: 768px)": {
+    gap: "12px",
+    "& svg": {
+      width: "20px",
+      height: "20px",
+    },
+  },
+  "@media (max-width: 480px)": {
+    gap: "10px",
+    "& svg": {
+      width: "18px",
+      height: "18px",
+    },
+  },
 });
 
 const CopyrightText = styled(Typography)({
   fontSize: "12px",
   color: "#333",
+  "@media (max-width: 480px)": {
+    fontSize: "11px",
+    textAlign: "center",
+  },
 });
 
 const Footer = () => {

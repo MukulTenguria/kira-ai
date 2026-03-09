@@ -3,6 +3,17 @@ import { AppBar, Box, Button, Chip, Stack, styled } from "@mui/material";
 export const CustomAppBar = styled(AppBar)({
   backgroundColor: "#032d42",
   borderBottom: "1px solid #ebebeb24",
+  "& .MuiToolbar-root": {
+    "@media (max-width: 1024px)": {
+      minHeight: "56px",
+    },
+    "@media (max-width: 768px)": {
+      minHeight: "52px",
+    },
+    "@media (max-width: 480px)": {
+      minHeight: "48px",
+    },
+  },
 });
 
 export const NavBarWrapper = styled(Box)({
@@ -30,6 +41,12 @@ export const NavBarWrapper = styled(Box)({
     backgroundClip: "text",
     color: "transparent",
     animation: "gradientMove 6s ease infinite",
+    "@media (max-width: 768px)": {
+      fontSize: "24px",
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "20px",
+    },
   },
 
   "@keyframes gradientMove": {
@@ -53,6 +70,13 @@ export const NavBarWrapper = styled(Box)({
     )
   `,
 
+    "@media (max-width: 1024px)": {
+      padding: "40px 60px",
+    },
+    "@media (max-width: 768px)": {
+      padding: "30px 20px",
+    },
+
     "& .MuiListItemIcon-root": {
       color: "#fff",
     },
@@ -64,6 +88,9 @@ export const NavBarWrapper = styled(Box)({
       backgroundColor: "unset",
       fontSize: "24px",
       fontWeight: 600,
+      "@media (max-width: 768px)": {
+        fontSize: "18px",
+      },
     },
     "& .active": {
       backgroundColor: "#124d6b !important",
@@ -72,6 +99,10 @@ export const NavBarWrapper = styled(Box)({
   },
   "& .list__container": {
     borderRight: "1px solid #ebebeb24",
+    "@media (max-width: 768px)": {
+      borderRight: "none",
+      marginBottom: "20px",
+    },
     "& .MuiListItemText-primary": {
       fontSize: "14px",
       fontWeight: 600,
@@ -109,10 +140,25 @@ export const BannerWrapper = styled(Box)({
   )
 `,
   paddingBottom: "50px",
+  "@media (max-width: 768px)": {
+    paddingBottom: "30px",
+  },
+  "@media (max-width: 480px)": {
+    paddingBottom: "20px",
+  },
   "& .banner__container": {
     padding: "80px 80px 50px 80px",
     color: "#fff",
     overflowX: "hidden", // ⛔ Prevent page horizontal scroll
+    "@media (max-width: 1200px)": {
+      padding: "60px 60px 40px 60px",
+    },
+    "@media (max-width: 768px)": {
+      padding: "40px 20px 30px 20px",
+    },
+    "@media (max-width: 480px)": {
+      padding: "30px 16px 20px 16px",
+    },
   },
 
   "& .MuiButton-outlined": {
@@ -122,6 +168,14 @@ export const BannerWrapper = styled(Box)({
     fontWeight: 600,
     fontSize: "15px",
     textTransform: "unset",
+    "@media (max-width: 768px)": {
+      fontSize: "13px",
+      padding: "8px 20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "12px",
+      padding: "6px 16px",
+    },
   },
 
   "& .MuiButton-contained": {
@@ -131,11 +185,25 @@ export const BannerWrapper = styled(Box)({
     fontWeight: 600,
     fontSize: "15px",
     textTransform: "unset",
+    "@media (max-width: 768px)": {
+      fontSize: "13px",
+      padding: "8px 20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "12px",
+      padding: "6px 16px",
+    },
   },
 
   "& .banner__slider": {
     marginTop: "40px",
     overflow: "hidden", // ⛔ keep slider inside
+    "@media (max-width: 768px)": {
+      marginTop: "30px",
+    },
+    "@media (max-width: 480px)": {
+      marginTop: "20px",
+    },
   },
 
   /* Slick internal layout */
@@ -152,6 +220,12 @@ export const BannerWrapper = styled(Box)({
   "& .banner__slider .slick-slide": {
     padding: "0 12px",
     boxSizing: "border-box",
+    "@media (max-width: 768px)": {
+      padding: "0 8px",
+    },
+    "@media (max-width: 480px)": {
+      padding: "0 4px",
+    },
   },
 
   /* Image styling */
@@ -204,6 +278,13 @@ export const CustomButton = styled(Button)({
 export const InsightInnovationWrapper = styled(Stack)({
   backgroundColor: "#032d42",
   color: "#fff",
+  padding: "60px 40px",
+  "@media (max-width: 768px)": {
+    padding: "40px 20px",
+  },
+  "@media (max-width: 480px)": {
+    padding: "30px 16px",
+  },
   "& .skill__forecast": {
     "&:hover": {
       boxShadow:
@@ -229,6 +310,12 @@ export const InsightInnovationWrapper = styled(Stack)({
     borderRadius: "20px",
     backgroundColor: "var(--cyan-900)",
     height: "200px",
+    "@media (max-width: 768px)": {
+      height: "150px",
+    },
+    "@media (max-width: 480px)": {
+      height: "120px",
+    },
     "& > div": {
       display: "flex",
     },

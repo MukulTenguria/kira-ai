@@ -85,6 +85,16 @@ const PlatformIndustry = () => {
         variant="h3"
         fontWeight={600}
         textAlign="center"
+        sx={{
+          "@media (max-width: 768px)": {
+            fontSize: "28px",
+            my: 6,
+          },
+          "@media (max-width: 480px)": {
+            fontSize: "22px",
+            my: 4,
+          },
+        }}
       >
         One platform, any industry
       </Typography>
@@ -95,6 +105,16 @@ const PlatformIndustry = () => {
         flex
         flexWrap="wrap"
         justifyContent="center"
+        sx={{
+          "@media (max-width: 768px)": {
+            gap: 1.5,
+            px: 2,
+          },
+          "@media (max-width: 480px)": {
+            gap: 1,
+            px: 1,
+          },
+        }}
       >
         {industry.map((data) => {
           return (
@@ -112,6 +132,18 @@ const PlatformIndustry = () => {
           variant="h3"
           fontWeight={600}
           textAlign="center"
+          sx={{
+            "@media (max-width: 768px)": {
+              fontSize: "28px",
+              mt: 6,
+              mb: 3,
+            },
+            "@media (max-width: 480px)": {
+              fontSize: "22px",
+              mt: 4,
+              mb: 2,
+            },
+          }}
         >
           When our customers work, the world works
         </Typography>
@@ -125,25 +157,71 @@ const PlatformIndustry = () => {
         variant="h3"
         fontWeight={600}
         textAlign="center"
+        sx={{
+          "@media (max-width: 768px)": {
+            fontSize: "28px",
+            mt: 6,
+            mb: 3,
+          },
+          "@media (max-width: 480px)": {
+            fontSize: "22px",
+            mt: 4,
+            mb: 2,
+          },
+        }}
       >
         Recognition from trusted industry experts
       </Typography>
-      <Grid container className="mx-10 mb-10">
+      <Grid
+        container
+        className="mx-10 mb-10"
+        spacing={2}
+        sx={{
+          "@media (max-width: 768px)": {
+            mx: 2,
+            mb: 6,
+          },
+          "@media (max-width: 480px)": {
+            mx: 1,
+            mb: 4,
+          },
+        }}
+      >
         {industries.map((data) => {
           return (
-            <Grid size={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={data.title}>
               <Box>
                 <Typography
                   className="op-70"
                   variant="subtitle1"
                   fontWeight={600}
                   textAlign="center"
+                  sx={{
+                    "@media (max-width: 768px)": {
+                      fontSize: "14px",
+                    },
+                    "@media (max-width: 480px)": {
+                      fontSize: "12px",
+                    },
+                  }}
                 >
                   {data.title}
                 </Typography>
               </Box>
               <Box>
-                <Typography variant="h1" fontWeight={600} textAlign="center">
+                <Typography
+                  variant="h1"
+                  fontWeight={600}
+                  textAlign="center"
+                  sx={{
+                    "@media (max-width: 768px)": {
+                      fontSize: "48px",
+                    },
+                    "@media (max-width: 480px)": {
+                      fontSize: "32px",
+                    },
+                  }}
+                >
                   {data.subHeading}
                 </Typography>
               </Box>
@@ -153,6 +231,14 @@ const PlatformIndustry = () => {
                   variant="subtitle1"
                   fontWeight={600}
                   textAlign="center"
+                  sx={{
+                    "@media (max-width: 768px)": {
+                      fontSize: "14px",
+                    },
+                    "@media (max-width: 480px)": {
+                      fontSize: "12px",
+                    },
+                  }}
                 >
                   {data.description}
                 </Typography>

@@ -28,9 +28,9 @@ const Banner = () => {
   return (
     <BannerWrapper className="banner">
       <Box className="banner__container">
-        <Grid container>
+        <Grid container spacing={2}>
           {/* LEFT SIDE */}
-          <Grid size={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <motion.div
               variants={fadeRight}
               initial="hidden"
@@ -41,25 +41,63 @@ const Banner = () => {
                 className="text-lime-500"
                 variant="h2"
                 fontWeight={600}
+                sx={{
+                  "@media (max-width: 1024px)": {
+                    fontSize: "32px",
+                  },
+                  "@media (max-width: 768px)": {
+                    fontSize: "24px",
+                  },
+                  "@media (max-width: 480px)": {
+                    fontSize: "20px",
+                  },
+                }}
               >
                 Come and put AI to work for
               </Typography>
 
-              <Typography variant="h2" fontWeight={600}>
+              <Typography
+                variant="h2"
+                fontWeight={600}
+                sx={{
+                  "@media (max-width: 1024px)": {
+                    fontSize: "32px",
+                  },
+                  "@media (max-width: 768px)": {
+                    fontSize: "24px",
+                  },
+                  "@media (max-width: 480px)": {
+                    fontSize: "20px",
+                  },
+                }}
+              >
                 you at Knowledge 2026
               </Typography>
             </motion.div>
           </Grid>
 
           {/* RIGHT SIDE */}
-          <Grid size={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <motion.div
               variants={fadeLeft}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Typography variant="h5">
+              <Typography
+                variant="h5"
+                sx={{
+                  "@media (max-width: 1024px)": {
+                    fontSize: "18px",
+                  },
+                  "@media (max-width: 768px)": {
+                    fontSize: "16px",
+                  },
+                  "@media (max-width: 480px)": {
+                    fontSize: "14px",
+                  },
+                }}
+              >
                 Only the ServiceNow AI Platform connects any workflow, any AI,
                 and any data source—so everything and everyone finally works
                 together.
@@ -71,7 +109,19 @@ const Banner = () => {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <Stack className="mt-4" direction="row" gap={5}>
+                <Stack
+                  className="mt-4"
+                  direction={{ xs: "column", sm: "column", md: "row" }}
+                  gap={5}
+                  sx={{
+                    "@media (max-width: 768px)": {
+                      gap: 3,
+                    },
+                    "@media (max-width: 480px)": {
+                      gap: 2,
+                    },
+                  }}
+                >
                   <AppButton variant="contained">Explore Platform</AppButton>
 
                   <AppButton variant="outlined">Watch Video</AppButton>
@@ -105,6 +155,16 @@ const Banner = () => {
             variant="h4"
             fontWeight={600}
             textAlign="center"
+            sx={{
+              "@media (max-width: 768px)": {
+                fontSize: "22px",
+                my: 4,
+              },
+              "@media (max-width: 480px)": {
+                fontSize: "18px",
+                my: 3,
+              },
+            }}
           >
             The world works with ServiceNow
           </Typography>
@@ -121,6 +181,14 @@ const Banner = () => {
             variant="h4"
             fontWeight={600}
             textAlign="center"
+            sx={{
+              "@media (max-width: 768px)": {
+                fontSize: "22px",
+              },
+              "@media (max-width: 480px)": {
+                fontSize: "18px",
+              },
+            }}
           >
             ServiceNow is the AI control tower
           </Typography>
@@ -137,6 +205,14 @@ const Banner = () => {
             variant="h4"
             fontWeight={600}
             textAlign="center"
+            sx={{
+              "@media (max-width: 768px)": {
+                fontSize: "22px",
+              },
+              "@media (max-width: 480px)": {
+                fontSize: "18px",
+              },
+            }}
           >
             for business reinvention
           </Typography>

@@ -50,14 +50,48 @@ const Navbar = () => {
       onMouseLeave={handleMouseLeaveArea}
     >
       <CustomAppBar position="static">
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            "@media (max-width: 1024px)": {
+              paddingX: "16px",
+            },
+            "@media (max-width: 768px)": {
+              paddingX: "12px",
+            },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              "@media (max-width: 1024px)": {
+                gap: 1,
+              },
+            }}
+          >
             <Typography variant="h1" className="logo__heading">
               Kira-AI
             </Typography>
             <Box
               component="ul"
-              sx={{ display: "flex", listStyle: "none", m: 0, p: 0 }}
+              sx={{
+                display: "flex",
+                listStyle: "none",
+                m: 0,
+                p: 0,
+                "@media (max-width: 1200px)": {
+                  gap: 0,
+                  "& li span": {
+                    display: "none",
+                  },
+                },
+                "@media (max-width: 1024px)": {
+                  display: "none",
+                },
+              }}
             >
               {Object.keys(MENU_LIST).map((menu) => {
                 const isOpen = activeMenu === menu;
@@ -81,6 +115,7 @@ const Navbar = () => {
                       mx: 0.5,
                       userSelect: "none",
                       height: "55px",
+                      fontSize: "14px",
                       "&::after": {
                         content: '""',
                         position: "absolute",
@@ -105,9 +140,9 @@ const Navbar = () => {
                   >
                     <span>{menu}</span>
                     {isOpen ? (
-                      <KeyboardArrowUpIcon />
+                      <KeyboardArrowUpIcon sx={{ fontSize: "20px" }} />
                     ) : (
-                      <KeyboardArrowDownIcon />
+                      <KeyboardArrowDownIcon sx={{ fontSize: "20px" }} />
                     )}
                   </Box>
                 );
@@ -116,12 +151,36 @@ const Navbar = () => {
           </Box>
 
           {/* RIGHT SIDE */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <IconButton sx={{ color: "#fff" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              "@media (max-width: 768px)": {
+                gap: 0.5,
+              },
+            }}
+          >
+            <IconButton
+              sx={{
+                color: "#fff",
+                "@media (max-width: 768px)": {
+                  padding: "8px",
+                },
+              }}
+            >
               <SearchIcon />
             </IconButton>
 
-            <Button sx={{ color: "#fff", textTransform: "none" }}>
+            <Button
+              sx={{
+                color: "#fff",
+                textTransform: "none",
+                "@media (max-width: 900px)": {
+                  display: "none",
+                },
+              }}
+            >
               Sign in
             </Button>
 
@@ -133,8 +192,15 @@ const Navbar = () => {
                 bgcolor: "#62d84e",
                 color: "#000",
                 fontWeight: "bold",
+                padding: "8px 16px",
+                fontSize: "14px",
                 "&:hover": {
                   bgcolor: "#52c43f",
+                },
+                "@media (max-width: 768px)": {
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "16px",
                 },
               }}
             >

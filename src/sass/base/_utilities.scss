@@ -1,21 +1,87 @@
-.u-center-text { text-align: center !important; }
+.u-center-text {
+  text-align: center !important;
+}
 
-.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
 .u-margin-bottom-medium {
-    margin-bottom: 4rem !important;
+  margin-bottom: 4rem !important;
 
-    @include respond(tab-port) {
-        margin-bottom: 3rem !important;
-    }
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
-.u-margin-bottom-big { 
-    margin-bottom: 8rem !important;
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
 
-    @include respond(tab-port) {
-        margin-bottom: 5rem !important;
-    }
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
-.u-margin-top-big { margin-top: 8rem !important; }
-.u-margin-top-huge { margin-top: 10rem !important; }
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+// Responsive padding utilities
+.u-padding-responsive-lg {
+  padding: 60px 40px;
+
+  @include respond(tab-land) {
+    padding: 40px 30px;
+  }
+
+  @include respond(tab-port) {
+    padding: 30px 20px;
+  }
+
+  @include respond(phone) {
+    padding: 20px 16px;
+  }
+}
+
+// Responsive font size utilities
+.u-text-responsive-lg {
+  font-size: 42px;
+
+  @include respond(tab-land) {
+    font-size: 36px;
+  }
+
+  @include respond(tab-port) {
+    font-size: 28px;
+  }
+
+  @include respond(phone) {
+    font-size: 22px;
+  }
+}
+
+.u-text-responsive-md {
+  font-size: 28px;
+
+  @include respond(tab-port) {
+    font-size: 22px;
+  }
+
+  @include respond(phone) {
+    font-size: 18px;
+  }
+}
+
+.u-text-responsive-sm {
+  font-size: 16px;
+
+  @include respond(tab-port) {
+    font-size: 15px;
+  }
+
+  @include respond(phone) {
+    font-size: 14px;
+  }
+}

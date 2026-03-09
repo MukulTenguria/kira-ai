@@ -12,6 +12,14 @@ const ContactUsWrapper = styled(Box)({
   backgroundColor: "#032d42",
   padding: "80px 40px",
   marginBottom: "40px",
+  "@media (max-width: 768px)": {
+    padding: "60px 20px",
+    marginBottom: "30px",
+  },
+  "@media (max-width: 480px)": {
+    padding: "40px 16px",
+    marginBottom: "20px",
+  },
 });
 
 const MainContainer = styled(Box)({
@@ -43,12 +51,30 @@ const SectionHeading = styled(Typography)({
   "& .highlight": {
     color: "#62d84e",
   },
+  "@media (max-width: 1024px)": {
+    fontSize: "36px",
+    marginBottom: "16px",
+  },
+  "@media (max-width: 768px)": {
+    fontSize: "28px",
+    marginBottom: "12px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "22px",
+    marginBottom: "10px",
+  },
 });
 
 const SectionSubtitle = styled(Typography)({
   fontSize: "16px",
   color: "#fff",
   lineHeight: 1.6,
+  "@media (max-width: 768px)": {
+    fontSize: "15px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "14px",
+  },
 });
 
 const RightSection = styled(Box)({
@@ -86,6 +112,23 @@ const ItemWrapper = styled(Box)({
       backgroundColor: "rgba(98, 216, 78, 0.1)",
     },
   },
+  "@media (max-width: 768px)": {
+    gap: "12px",
+    paddingBottom: "16px",
+    paddingTop: "16px",
+    paddingLeft: "12px",
+    paddingRight: "12px",
+    marginBottom: "10px",
+  },
+  "@media (max-width: 480px)": {
+    gap: "10px",
+    paddingBottom: "12px",
+    paddingTop: "12px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    marginBottom: "8px",
+    flexDirection: "column",
+  },
 });
 
 const IconCircle = styled(Box)({
@@ -102,6 +145,22 @@ const IconCircle = styled(Box)({
     fontSize: "32px",
     color: "#62d84e",
   },
+  "@media (max-width: 768px)": {
+    width: "50px",
+    height: "50px",
+    minWidth: "50px",
+    "& svg": {
+      fontSize: "24px",
+    },
+  },
+  "@media (max-width: 480px)": {
+    width: "44px",
+    height: "44px",
+    minWidth: "44px",
+    "& svg": {
+      fontSize: "20px",
+    },
+  },
 });
 
 const ContentWrapper = styled(Box)({
@@ -115,6 +174,12 @@ const ItemTitle = styled(Typography)({
   color: "#fff",
   marginBottom: "8px",
   variant: "h5",
+  "@media (max-width: 768px)": {
+    fontSize: "18px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "16px",
+  },
 });
 
 const ItemDescription = styled(Typography)({
@@ -122,6 +187,12 @@ const ItemDescription = styled(Typography)({
   color: "#fff",
   lineHeight: 1.6,
   variant: "body1",
+  "@media (max-width: 768px)": {
+    fontSize: "14px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "13px",
+  },
 });
 
 const ArrowCircle = styled(Box)({
@@ -137,6 +208,23 @@ const ArrowCircle = styled(Box)({
   "& svg": {
     fontSize: "20px",
     color: "#62d84e",
+  },
+  "@media (max-width: 768px)": {
+    width: "40px",
+    height: "40px",
+    minWidth: "40px",
+    "& svg": {
+      fontSize: "16px",
+    },
+  },
+  "@media (max-width: 480px)": {
+    width: "36px",
+    height: "36px",
+    minWidth: "36px",
+    display: "none",
+    "& svg": {
+      fontSize: "14px",
+    },
   },
 });
 
